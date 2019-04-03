@@ -1,10 +1,8 @@
 require 'nokogiri'
-
 require 'open-uri'
 
 # class that scrapes html
 class Parse
-
   def self.search(word)
     prepared_word = word.strip.gsub(/\s/, "+").downcase
     url = prepared_word
