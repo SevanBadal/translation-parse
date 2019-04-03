@@ -1,0 +1,160 @@
+body{
+  background-color: #FDF6E3;
+  margin: 0;
+  font-weight: 300;
+}
+form {
+  width: 400px;
+  margin: 0 auto;
+
+}
+
+input.field {
+  width: 375px;
+}
+input[type=submit] {
+  width: 50px;
+  height: 50px !important;
+}
+h1{
+  font-weight: 900;
+  font-size: 5em;
+  line-height: 100px;
+}
+h1, h2 {
+  font-family: 'Anonymous Pro', monospace;
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+.img-circle{
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+}
+.container {
+ width: 100%;
+ margin: 0 auto;
+}
+.container > div:hover{
+  opacity: 0.97;
+}
+.container > div:hover >span.hide{
+  visibility: visible;
+}
+
+.card-grey {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  background-color: #E8E4D9;
+  margin: 10px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+.card-blue {
+  font-size: 5em;
+  height: 50vh;
+  width: 95%;
+  padding: 10px;
+  background-color: #58A4B0;
+  margin: 10px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+  margin-left: 2.5%;
+}
+.card-pascal {
+  font-size: 5em;
+  height: 50vh;
+  width: 90%;
+  padding: 10px;
+  background-color: #A9BCD0;
+  margin: 10px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+  margin-left: 5%;
+
+}
+.card-peach {
+  width: 85%;
+  padding: 10px;
+  background-color: #FFE0B5;
+  margin: 10px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+  margin-left: 7.5%;
+
+}
+.inline-item{
+  display: inline;
+  list-style: none;
+}
+.inline-block-item, .icon{
+  display: inline-block;
+}
+.no-padding{
+  padding: 0px;
+}
+.btn-black{
+  color: black;
+  font-size: 30px;
+
+}
+.btn-black:hover{
+  color: #2AA198;
+}
+a{
+  text-decoration: none;
+}
+.hide{
+  visibility: hidden;
+}
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+  .card-grey, .card-blue, .card-peach, .card-pascal {
+    border-radius: 0px;
+    margin: 0;
+    width: 100%;
+
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 100%;
+  }
+  .card-blue, .card-pascal{
+    font-size: 3em;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 100%;
+  }
+  .card-blue, .card-pascal{
+    font-size: 2em;
+  }
+
+}
+@media (max-width: 425px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+  }
+  div{
+    height: 100vh;
+    line-height: 250%;
+  }
+}
