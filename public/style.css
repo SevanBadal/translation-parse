@@ -1,3 +1,4 @@
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 body{
   background-color: #FDF6E3;
   margin: 0;
@@ -6,9 +7,19 @@ body{
 form {
   width: 400px;
   margin: 0 auto;
-
 }
-
+.fas{
+  text-decoration: none;
+  color: #FDF6E3;
+  opacity: 0;
+  transition: 1s;
+}
+.fas:hover{
+  color: black;
+}
+.card-blue:hover .fas{
+  opacity: 1;
+}
 input.field {
   width: 375px;
 }
@@ -54,7 +65,7 @@ p {
   box-shadow: 0 10px 30px rgba(0,0,0,.05);
 }
 .card-blue {
-  font-size: 5em;
+  font-size: 3em;
   height: 50vh;
   width: 95%;
   padding: 10px;
@@ -66,7 +77,7 @@ p {
   margin-left: 2.5%;
 }
 .card-pascal {
-  font-size: 5em;
+  font-size: 3em;
   height: 50vh;
   width: 90%;
   padding: 10px;
