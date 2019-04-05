@@ -1,9 +1,17 @@
-<div class="card-blue">
-  <a href="/"><i class="fas fa-undo-alt"></i></a>
-  <p>Pinyin: <%= @translation[:first]%> </p>
-  <p>Characters: <%=@translation[:chinese_first]%></p>
-</div>
-<div class="card-pascal">
-  <p>Pinyin: <%= @translation[:second]%></p>
-  <p>Characters: <%=@translation[:chinese_second]%></p>
+<div class="custom-container d-flex justify-content-around align-items-center">
+  <div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">Translation Two</div>
+    <div class="card-body">
+      <p>Pinyin: <%= @translation[:first]%> </p>
+      <p>Characters: <%=@translation[:chinese_first]%></p>
+    </div>
+  </div>
+  <a href="/"><i class="blue-icon fas fa-undo-alt"></i></a>
+  <div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">Translation Two</div>
+    <div class="card-body rounded">
+      <p>Pinyin: <%= @translation[:second]%></p>
+      <p>Characters: <%=@translation[:chinese_second]%></p>
+    </div>
+  </div>
 </div>
