@@ -3,7 +3,8 @@ require "sinatra/reloader" if development?
 require "pry-byebug"
 require "better_errors"
 require "sqlite3"
-require_relative "app/models/parse"
+require_relative "models/parse"
+require_relative "models/translation"
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = File.expand_path(__dir__)
@@ -26,6 +27,9 @@ post '/tranlsation' do
 end
 
 get "/translation-list" do
-  @translations = DB.execute("SELECT * FROM translations;")
+  binding.pry
+  DB.results_as_hash = true
+  data = DB.execute("SELECT * FROM translations;")
+  @translations = data.map { |e| Translation.new(e) }
   erb :translations
 end

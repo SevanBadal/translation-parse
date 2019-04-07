@@ -14,8 +14,9 @@ class Parse
     chinese_second = chinese[1].text.strip
     first = titles[0].text
     second = titles[1].text
-    { first: first, second: second, chinese_first: chinese_first,
-      chinese_second: chinese_second, english_word: word }
+    { 'first_pinyin' => first, 'second_pinyin' => second,
+      'first_character' => chinese_first,
+      'second_character' => chinese_second, 'english_word' => word }
   end
 end
 
