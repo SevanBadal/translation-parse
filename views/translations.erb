@@ -1,18 +1,12 @@
 <div class=" custom-container row d-flex justify-content-center align-items-center py-3 rounded">
   <div class="col-6 col-md-6">
     <h1>Test!</h1>
-    <ol>
-      <% @translations.each do |translation| %>
-        <h2>translation.english_word</h2>
-        <li>translation.first_pinyin</li>
-        <ul>
-          <li>translation.first_character</li>
-        </ul>
-        <li>translation.second_pinyin</li>
-        <ul>
-          <li>translation.second_character</li>
-        </ul>
+      <% @trans.each do |translation| %>
+        <h2><%=translation.english_word%></h2>
+        <h3><%=translation.first_pinyin%></h3>
+        <h3><%=translation.first_character%></h3>
+        <h3><%=translation.second_pinyin%></h3>
+        <h3><%=translation.second_character%></h3>
       <% end %>
-    </ol>
   </div>
 </div>

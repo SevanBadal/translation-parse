@@ -4,7 +4,7 @@ require "pry-byebug"
 require "better_errors"
 require "sqlite3"
 require_relative "models/parse"
-require_relative "models/translation"
+require_relative 'models/translation.rb'
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = File.expand_path(__dir__)
@@ -19,7 +19,7 @@ get '/' do
   erb :index # Do not remove this line
 end
 
-post '/tranlsation' do
+post '/translation' do
   # binding.pry
   word = params[:word]
   @translation = Parse.search(word)
@@ -27,9 +27,9 @@ post '/tranlsation' do
 end
 
 get "/translation-list" do
-  binding.pry
   DB.results_as_hash = true
   data = DB.execute("SELECT * FROM translations;")
-  @translations = data.map { |e| Translation.new(e) }
+  data.each {|e| p e }
+  @trans = data.map { |e| Translation.new(e) }
   erb :translations
 end

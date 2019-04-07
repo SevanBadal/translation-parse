@@ -2,16 +2,16 @@
   <div class="card bg-light mb-3" style="max-width: 18rem;">
     <div class="card-header">Translation Two</div>
     <div class="card-body">
-      <p>Pinyin: <%= @translation[:first]%> </p>
-      <p>Characters: <%=@translation[:chinese_first]%></p>
+      <p>Pinyin: <%= @translation['first_pinyin']%> </p>
+      <p>Characters: <%=@translation['first_character']%></p>
     </div>
   </div>
   <a href="/"><i class="blue-icon fas fa-undo-alt"></i></a>
   <div class="card bg-light mb-3" style="max-width: 18rem;">
     <div class="card-header">Translation Two</div>
     <div class="card-body rounded">
-      <p>Pinyin: <%= @translation[:second]%></p>
-      <p>Characters: <%=@translation[:chinese_second]%></p>
+      <p>Pinyin: <%= @translation['second_pinyin']%></p>
+      <p>Characters: <%=@translation['second_character']%></p>
     </div>
   </div>
 </div>

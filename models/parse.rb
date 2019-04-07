@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
+require 'pry-byebug'
 
 # class that scrapes html
 class Parse
